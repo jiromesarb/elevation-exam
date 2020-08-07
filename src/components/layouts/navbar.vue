@@ -1,40 +1,26 @@
 <template id="">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-5">
-            <a class="navbar-brand mx-5" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-5" id="navbar">
+            <a class="navbar-brand mx-5 text-center" href="#">
+                <NavbarBrand/>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav px-5">
-                    <li class="nav-item mx-4 active">
-                        <a class="nav-link" href="#">HOME</a>
-                        <!-- <hr class="break-sec-w"> -->
+                    <li class="nav-item mx-4" :class="[this.$route.path == '/home' ? 'active' : '', this.$route.path == '/' ? 'active' : '']">
+                        <router-link class="nav-link" to="/home">HOME</router-link>
                     </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">ABOUT US</a>
+                    <li class="nav-item mx-4" :class="[this.$route.path == '/about-us' ? 'active' : '']">
+                        <router-link class="nav-link" to="/about-us">ABOUT US</router-link>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">OUR ADVOCACY</a>
                     </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">GET IN TOUCH</a>
+                    <li class="nav-item mx-4" :class="[this.$route.path == '/get-in-touch' ? 'active' : '']">
+                        <router-link class="nav-link" to="/get-in-touch">GET IN TOUCH</router-link>
                     </li>
-                    <!-- <li class="nav-item mx-5">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-facebook"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item mx-5">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-instagram"></span>
-                        </a>
-                    </li> -->
                 </ul>
 
                 <ul class="navbar-nav ml-auto px-5">
@@ -54,31 +40,25 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- <span class="navbar-text pull-right">
-                    <span class="mx-2 fa fa-twitter"></span>
-                    <span class="mx-2 fa fa-facebook"></span>
-                    <span class="mx-2 fa fa-instagram"></span>
-                </span> -->
             </div>
         </nav>
     </div>
 </template>
 <script>
-const $ = require('jquery');
-window.$ = $;
+    const $ = require('jquery');
+    window.$ = $;
+
+    import NavbarBrand from '@/components/includes/navbar_brand.vue'
     export default {
         name: 'Navbar',
+        components: {
+            NavbarBrand
+        },
         data () {
             return {
                 scrollY: null,
             }
         },
-        computed: {
-            currentPage() {
-                return this.$route.path;
-            }
-        }
     }
 </script>
 <style scoped>
@@ -121,13 +101,10 @@ window.$ = $;
         /* padding-top: 50px !important; */
         /* padding-bottom: 50px !important; */
     }
+    .nav-link {
+        letter-spacing: 1px;
+    }
     .align-center {
         margin: 0 auto;
-    }
-    .break-sec-w {
-        width: 40px;
-
-        border-top: 3px solid #39A7A0;
-        margin-top: 10px !important;
     }
 </style>

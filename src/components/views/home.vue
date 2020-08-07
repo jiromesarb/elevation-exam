@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="home bg-light" id="home-main-cover">
+    <div style="min-width: 100% !important;">
+        <div class="home bg-light mx-0" id="home-main-cover">
             <Navbar class="sticky" />
             <div class="custom-section d-flex align-items-end px-5">
 
@@ -11,12 +11,15 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center py-5 bg-elevation">
+
             <div class="col-md-7 text-center">
                 <h3 class="text-elevation text-center font-weight-bold text-uppercase mb-3">Help us give more Filipino <br> families a decent home, bigger <br> opportunities, and a better <br> chance at life.</h3>
                 <p class="text-center mb-5">
-                    <small>Habitat for Humanity Philippines, by building strength, stability, and self-reliance through shelter, aims to strengthen its vision of a <br> world where everyone has a decent place to live. With over 140,000 families being served by our ministry, you can help us <br> continue our mission of putting God’s love into action by bringing people together to build homes, communities, and hope.</small>
+                    <small>
+                        Habitat for Humanity Philippines, by building strength, stability, and self-reliance through shelter, aims to strengthen its vision of a world where everyone has a decent place to live. With over 140,000 families being served by our ministry, you can help us continue our mission of putting God’s love into action by bringing people together to build homes, communities, and hope.
+                    </small>
                 </p>
-                <button class="btn btn-outline-info btn-outline-elevation py-2 px-3">Learn More</button>
+                <button class="btn btn-outline-info btn-outline-elevation font-weight-bold text-uppercase py-2 px-3">Learn More</button>
             </div>
         </div>
 
@@ -43,7 +46,7 @@
 
         <div class="row">
             <div class="col-lg-6 p-5">
-                <div class="m-5">
+                <div class="m-3">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">Unexpected Blessings</h3>
                     <p class="mb-5">
                         <small>
@@ -79,12 +82,30 @@
             <div class="col-md-12 py-5">
                 <div class="my-5 text-center">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">Our Partners</h3>
-                    <p class="mb-3">
+                    <p class="mb-5">
                         Various individuals and groups have helped pave the way to strengthen communities, build safer and <br> decent homes, and transform the lives of families living in them.
                     </p>
-                    <h3 class="mb-3">
-                        <span class="fa fa-"></span>
-                    </h3>
+
+                    <div class="row mb-5">
+                        <div class="col-md-12">
+                            <div class="d-inline px-5">
+                                <AmericanExpress/>
+                            </div>
+                            <div class="d-inline px-5">
+                                <Google/>
+                            </div>
+                            <div class="d-inline px-5">
+                                <Paypal/>
+                            </div>
+                            <div class="d-inline px-5">
+                                <Amazon/>
+                            </div>
+                            <div class="d-inline px-5">
+                                <Ebay/>
+                            </div>
+                        </div>
+                    </div>
+
                     <button class="btn btn-outline-dark text-uppercase py-2 px-3">View More</button>
                 </div>
             </div>
@@ -94,17 +115,30 @@
 
 <script>
 import Navbar from '@/components/layouts/navbar.vue'
+
+// Partners SVG
+import AmericanExpress from '@/components/includes/american_express.vue'
+import Google from '@/components/includes/google.vue'
+import Paypal from '@/components/includes/paypal.vue'
+import Amazon from '@/components/includes/amazon.vue'
+import Ebay from '@/components/includes/ebay.vue'
+
 export default {
   name: 'Home',
   components: {
-      Navbar
+      Navbar,
+      AmericanExpress,
+      Google,
+      Paypal,
+      Amazon,
+      Ebay,
   },
 }
 </script>
 <style media="screen">
     .custom-section {
         padding: 20px;
-        height: 130vh;
+        height: 140vh;
         overflow: hidden;
         justify-content: center;
         flex-direction: column;
@@ -112,6 +146,10 @@ export default {
     }
     #home-main-cover {
         background: url('../../assets/images/globe_header@2x.png');
+        background-size: cover;
+        background-position: center 0px;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
         background-size: cover;
     }
     img.img-fluid {
