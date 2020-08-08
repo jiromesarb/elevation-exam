@@ -2,7 +2,7 @@
     <div style="min-width: 100% !important;">
         <Navbar class="sticky" />
         <div class="home bg-light mx-0 d-flex align-items-end px-5" id="about-us-main-cover">
-            
+
         </div>
         <div class="row d-flex justify-content-center py-5 bg-elevation-1">
 
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
             <div class="col-lg-6 p-5">
                 <div class="mx-4 my-3">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">I am Donnie Tantoco, <br> retailer, husband, <br> and a lifelong <br> student.</h3>
@@ -136,7 +136,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
             <div class="col-lg-6 p-5">
                 <div class="mx-4 my-3">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">I am Edward Gaisano, <br> businessman, a <br> doctor at heart.</h3>
@@ -215,10 +215,11 @@ export default {
         flex-direction: column;
         color: white;
 
+        background: url('../../assets/images/timeline@2x.png') no-repeat center center fixed;
         background: url('../../assets/images/timeline@2x.png');
-        background-size: 100% 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-position: center center; */
+        /* background-repeat: no-repeat; */
     }
     img.img-fluid {
         width:100% !important;

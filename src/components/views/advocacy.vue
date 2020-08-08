@@ -1,8 +1,7 @@
 <template>
     <div style="min-width: 100% !important;">
         <Navbar class="sticky" />
-        <div class="home bg-light mx-0 d-flex align-items-end px-5" id="advocacy-main-cover">
-
+        <div class="home bg-light mx-0" id="advocacy-main-cover">
         </div>
         <div class="row d-flex justify-content-center py-5 bg-elevation-1">
 
@@ -43,7 +42,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row flex-column-reverse flex-md-row">
             <div class="col-lg-6 p-5">
                 <div class="mx-4 my-3">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">Overseas Filipinos Remittances for Development Project</h3>
@@ -91,16 +90,21 @@ export default {
     }
     #advocacy-main-cover {
         padding: 20px;
-        height: 100vh;
+        width: 100%;
+        height: 140vh;
         overflow: hidden;
         justify-content: center;
         flex-direction: column;
         color: white;
 
-        background: url('../../assets/images/03-touch-athletes-fist-bump.jpg');
-        background-size: 100% 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
+        background: url('../../assets/images/03-touch-athletes-fist-bump.jpg') no-repeat center center fixed;
+        /* background-size: 100%; */
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        /* background-position: fixed; */
+    }
+    .text-container {
+        min-height: 100vh !important;
     }
     img.img-fluid {
         width:100% !important;

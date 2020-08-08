@@ -1,6 +1,6 @@
 <template id="">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-5" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-5" :class="this.isFixed == true ? 'fixed-top' : null " id="navbar">
             <a class="navbar-brand mx-5 text-center" href="#">
                 <NavbarBrand/>
             </a>
@@ -22,24 +22,25 @@
                         <router-link class="nav-link" to="/get-in-touch">GET IN TOUCH</router-link>
                     </li>
                 </ul>
-
-                <ul class="navbar-nav ml-auto px-5">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-facebook-square"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span class="fa fa-instagram"></span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav ml-auto px-5 ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="fa fa-facebook-square"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
@@ -53,6 +54,9 @@
         name: 'Navbar',
         components: {
             NavbarBrand
+        },
+        props: {
+            isFixed: Boolean,
         },
         data () {
             return {

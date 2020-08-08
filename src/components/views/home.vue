@@ -1,7 +1,7 @@
 <template>
     <div style="min-width: 100% !important;">
+        <Navbar :isFixed="true" />
         <div class="home bg-light mx-0" id="home-main-cover">
-            <Navbar class="sticky" />
             <div class="custom-section d-flex align-items-end px-5">
 
                 <!-- <h1 class="display-4 mb-2"><span>Everything In Moderation <br>Won't Harm!</span></h1>
@@ -44,7 +44,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row flex-column-reverse flex-md-row">
             <div class="col-lg-6 p-5">
                 <div class="m-3">
                     <h3 class="text-elevation text-uppercase font-weight-bold mb-3">Unexpected Blessings</h3>
@@ -136,21 +136,21 @@ export default {
 }
 </script>
 <style media="screen">
-    .custom-section {
+    /* .custom-section {
         padding: 20px;
-        height: 140vh;
         overflow: hidden;
         justify-content: center;
         flex-direction: column;
         color: white;
-    }
+    } */
     #home-main-cover {
+        height: 150vh;
+        /* background: url('../../assets/images/globe_header@2x.png') no-repeat center center fixed; */
         background: url('../../assets/images/globe_header@2x.png');
         background-size: cover;
-        /* background-position: center; */
-        background-repeat: no-repeat;
+        background-position: top center;
+        /* background-repeat: no-repeat; */
         /* background-attachment: fixed; */
-        background-size: cover;
     }
     img.img-fluid {
         width:100% !important;
