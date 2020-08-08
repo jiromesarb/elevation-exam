@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 // Import Components Here
 import Home from '../components/views/home.vue'
 import AboutUs from '../components/views/about_us.vue'
+import Advocacy from '../components/views/advocacy.vue'
 import GetInTouch from '../components/views/get_in_touch.vue'
 
 // initialize Vue router
@@ -24,6 +25,11 @@ const routes = [
         path: '/about-us',
         name: 'about_us',
         component: AboutUs
+    },
+    {
+        path: '/advocacy',
+        name: 'advocacy',
+        component: Advocacy
     },
     {
         path: '/get-in-touch',

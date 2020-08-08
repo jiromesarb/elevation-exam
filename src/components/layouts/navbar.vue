@@ -15,8 +15,8 @@
                     <li class="nav-item mx-4" :class="[this.$route.path == '/about-us' ? 'active' : '']">
                         <router-link class="nav-link" to="/about-us">ABOUT US</router-link>
                     </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">OUR ADVOCACY</a>
+                    <li class="nav-item mx-4" :class="[this.$route.path == '/advocacy' ? 'active' : '']">
+                        <router-link class="nav-link" to="/advocacy">OUR ADVOCACY</router-link>
                     </li>
                     <li class="nav-item mx-4" :class="[this.$route.path == '/get-in-touch' ? 'active' : '']">
                         <router-link class="nav-link" to="/get-in-touch">GET IN TOUCH</router-link>

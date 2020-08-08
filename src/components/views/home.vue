@@ -147,7 +147,7 @@ export default {
     #home-main-cover {
         background: url('../../assets/images/globe_header@2x.png');
         background-size: cover;
-        background-position: center 0px;
+        /* background-position: center; */
         background-repeat: no-repeat;
         /* background-attachment: fixed; */
         background-size: cover;

@@ -2,13 +2,7 @@
     <div style="min-width: 100% !important;">
         <Navbar class="sticky" />
         <div class="home bg-light mx-0 d-flex align-items-end px-5" id="about-us-main-cover">
-            <!-- <div class="custom-section"> -->
-
-                <!-- <h1 class="display-4 mb-2"><span>Everything In Moderation <br>Won't Harm!</span></h1>
-                <h5 class="font-weight-lighter">Luxury Wine from France</h5>
-                <br>
-                <router-link class="btn btn-outline-light py-3 px-4" :to="{ path: '/store' }">VISIT STORE</router-link> -->
-            <!-- </div> -->
+            
         </div>
         <div class="row d-flex justify-content-center py-5 bg-elevation-1">
 
